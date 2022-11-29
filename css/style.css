@@ -1,0 +1,45 @@
+body {
+    background-color: #f7e4b7;
+    background-image: url('../img/background.png');
+    background-repeat: no-repeat;
+}
+
+#texte_css {
+    position: absolute;
+    top: 600px;
+    font-size: 3em;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+}
+
+#depart {
+    margin-left: 550px;
+    margin-top: 400px;
+    display: grid;
+    height: 700px;
+    width: 700px;
+    grid-template-columns:[ligne1]70px[ligne2]150px[ligne3]150px[ligne4]90px[ligne5]10px[ligne6];
+    grid-template-rows: [column1]100px[column2]100px[column3]50px[column4]100px[column5];
+    grid-gap: 0px;
+    grid-template-areas:
+    ". oeil_gauche . oeil_droite ."
+    ". . nez . ."
+    ". . bouche . . "
+    "joue_gauche . . .joue_droite "; 
+}
+
+
+.grid_items {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.oeil_gauche {grid-area: oeil_gauche;}
+.oeil_droit {grid-area: oeil_droite; }
+.nez {grid-area: nez;}
+.joue_droite {grid-area: joue_droite;}
+.joue_gauche{grid-area: joue_gauche;}
+.bouche{grid-area: bouche;}

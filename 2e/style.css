@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "design";
+    src: url("la_casa_del_cementerio/La\ Casa\ del\ Cementerio.otf");
+
+    font-family: "starwars";
+    src: url("star_jedi/starjedi/Starjedi.ttf");
+  }
+* {
+    background: rgb(131, 58, 180);
+    background: radial-gradient(
+      circle,
+      rgba(131, 58, 180, 1) 0%,
+      rgba(69, 159, 29, 1) 33%,
+      rgba(154, 157, 14, 1) 65%,
+      rgba(158, 22, 102, 1) 93%
+    );
+  }
+.bouton {
+  margin: 1em;
+  font-size: 1.5em;
+  font-family: "starwars";
+  border: none;
+  cursor: pointer;
+  border-radius: 0.4em;
+  background: var(--btn-couleur-fond, #d3d3d3);
+  color: var(--btn-couleur-texte, #000);
+  padding: var(--btn-largeur, 1em);
+}
+.bouton-success {
+  --btn-couleur-fond: #62f567;
+}
+.bouton-erreur {
+  --btn-couleur-fond: red;
+  --btn-couleur-texte: white;
+}
+.bouton-large {
+  --btn-largeur: 2em;
+}
+
+#sourir
+{
+    
+    border: transparent;
+    background: transparent;
+    margin: 20px;
+    color:yellow;
+}

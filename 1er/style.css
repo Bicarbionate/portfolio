@@ -1,0 +1,131 @@
+html {
+  background: rgb(131, 58, 180);
+  background: radial-gradient(
+    circle,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(69, 159, 29, 1) 33%,
+    rgba(154, 157, 14, 1) 65%,
+    rgba(158, 22, 102, 1) 93%
+  );
+}
+:root{ --couleur : yellow}
+
+@font-face {
+  font-family: "design";
+  src: url("babyblocks/baby\ blocks.ttf");
+}
+
+@keyframes to1 {
+  33% {
+    background-color: blue;
+    transform: translateY(75px);
+  }
+  33% {
+    background-color:  var(--couleur);
+  }
+  34% {
+    background-color: green;
+    transform: translateY(-75px);
+  }
+}
+@keyframes to2 {
+  10% {
+    background-color: red;
+  }
+  50% {
+    background-color: green;
+    transform: translate(-200px);
+  }
+  40% {
+    background-color: purple;
+  }
+}
+@keyframes to3 {
+  40% {
+    background-color: blue;
+    transform: translate(100px);
+  }
+  40% {
+    background-color:  var(--couleur, yellow);
+  }
+  20% {
+    background-color: rgb(219, 15, 15);
+    transform: translate(-100px);
+  }
+}
+@keyframes to4 {
+  50% {
+    background-color: yellow;
+  }
+  40% {
+    background-color: crimson;
+  }
+  10% {
+    background-color: rgb(255, 0, 234);
+  }
+}
+@keyframes to5 {
+  50% {
+    transform: scaleX(2.5) rotate(360deg);
+  }
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+}
+
+#grid_container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: [ligne1]35%[ligne2]30%[ligne3]35%[ligne4];
+  grid-template-rows: [column1]35%[column2]30%[column3]35%[column4];
+  grid-gap: 0px;
+  grid-template-areas:
+    "nav head head "
+    "nav img asi"
+    "nav foot foot";
+}
+
+
+.titre {
+  background: rgb(131, 58, 180);
+  background: radial-gradient(
+    circle,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(69, 159, 29, 1) 33%,
+    rgba(154, 157, 14, 1) 65%,
+    rgba(158, 22, 102, 1) 93%
+  );
+}
+
+.grid_items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  font-family: "design";
+}
+
+.nav {
+  animation: to1 4ms infinite;
+  grid-area: nav;
+}
+.head {
+  animation: to2 9ms infinite;
+  grid-area: head;
+}
+.img {
+  animation: to5 800ms infinite linear;
+  grid-area: img;
+}
+.asi {
+  animation: to3 3ms infinite;
+  grid-area: asi;
+}
+.foot {
+  animation: to4 13ms infinite;
+  grid-area: foot;
+}
